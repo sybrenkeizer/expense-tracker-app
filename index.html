@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+  <title>Expense Tracker</title>
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- HEADER -->
+    <header class="main-header">
+      <h1>Expense Tracker</h1>
+      <div class="balance">
+        <h2 id="total-balance">$00.00</h2>
+      </div>
+      <div class="income">
+        <h3 id="total-income">+ $00.00</h3>
+      </div>
+      <div class="expense">
+        <h3 id="total-expense">- $00.00</h3>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- FORM -->
+      <form id="form">
+        
+        <div class="form-control fc__name">
+          <label for="name-input">
+            <input type="text" id="name-input" placeholder="Name" autocomplete="off">
+            <span>Name</span>
+          </label>
+        </div>
+        
+        <div class="form-control fc__amount">
+          <label for="amount-input">
+            <input type="number" id="amount-input" placeholder="Amount" autocomplete="off">
+            <span>Amount</span>
+          </label>
+        </div>
+
+        <div class="form-control fc__btn">
+          <input type="submit" class="form-submit-btn" id="form-submit-btn" value="Submit">
+        </div>
+
+      </form>
+
+      <!-- TRANSACTIONS -->
+      <div class="transaction-container" id="transaction-container">
+        <header class="transaction__header">
+          <h3>Transactions</h3>
+          <a href="#" class="clear-transactions-btn" title="Clear list">
+            <i class="fa-regular fa-trash-can fa-lg"></i>
+          </a>
+        </header>
+        <ul class="transaction-list" id="transaction-list"></ul>
+      </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <small>&copy; Expense Tracker <span id="footer-date">2022.</span> No Rights Reserved.</small>
+    </footer>
+  </div>
+
+
+  <!-- NOTIFICATION POPUP -->
+  <div class="notification-popup" id="notification-popup">
+    <span id="notification-message"></span>
+  </div>
+
+  <!-- CONFIRMATION POPUP -->
+  <div class="confirmation-popup" id="confirmation-popup">
+    <span id="confirmation-message">Are you sure to remove all transactions?</span>
+    <div class="buttons" id="confirmation-btns">
+      <button>No</button>
+      <button>Yes</button>
+    </div>
+  </div>
+
+
+</body>
+</html>
